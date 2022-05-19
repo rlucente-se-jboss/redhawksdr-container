@@ -42,9 +42,9 @@ REDHAWK SDR base OCI container image.
     sudo ./02-setup-repos.sh
     ./03-build-redhawk-container.sh
 
-The last script should not be run as `sudo` although it will prompt
-for a `sudo` password before running the `podman build` command.
-The container image build can take over an hour depending on your
-hardware. The resulting image will be exported as a compressed OCI
-image archive in the same folder as the scripts.
+The last script ___should not___ be run as `sudo` although it will
+prompt for a `sudo` password before running the `podman build`
+command.  The container image build can take over an hour depending
+on your hardware. The resulting image will be exported as a compressed
+OCI image archive in the same folder as the scripts.
 
