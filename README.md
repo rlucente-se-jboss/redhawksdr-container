@@ -23,15 +23,15 @@ around an hour to complete.
 
 To build the container image, first install a minimal RHEL 7 system.
 After rebooting the newly installed system, copy the contents of
-this repository to the system, register the subscription, and then
-update the base packages:
+this repository to the system. Use the `01-setup-rhel.sh` script
+to register the subscription and update the base packages:
 
     cd /path/to/redhawksdr-container
     sudo ./01-setup-rhel.sh
 
 where `/path/to/redhawksdr-container` matches where you placed the
 contents of this repository on the RHEL 7 system. Reboot the system
-since the kernel may have been updated.
+since the kernel packages may have been updated.
 
     sudo reboot
 
@@ -42,7 +42,9 @@ REDHAWK SDR base OCI container image.
     sudo ./02-setup-repos.sh
     ./03-build-redhawk-container.sh
 
-The last script can take over an hour depending on your hardware.
-The resulting image will be exported as a compressed OCI image
-archive.
+The last script should not be run as `sudo` although it will prompt
+for a `sudo` password before running the `podman build` command.
+The container image build can take over an hour depending on your
+hardware. The resulting image will be exported as a compressed OCI
+image archive in the same folder as the scripts.
 
