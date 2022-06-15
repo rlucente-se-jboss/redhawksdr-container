@@ -33,7 +33,7 @@
 -# Configure redhawk-dependencies-<version>-<dist>-<arch>.tar.gz file as a yum repository
 -RUN dname=redhawk-dependencies-$redhawk_deps_ver-$dist-$arch && \
 +# Configure redhawk-yum-<version>-<dist>-<arch>.tar.gz file as a yum repository
-+RUN dname=redhawk-$redhawk_deps_ver-$dist-$arch && \
++RUN dname=redhawk-yum-$redhawk_deps_ver-$dist-$arch && \
      repo="[redhawk-deps]\nname=redhawk-deps\nbaseurl=file:///src/$dname/\nenabled=1\n\ngpgcheck=0" && \
      printf $repo >> /etc/yum.repos.d/redhawk-deps.repo; \
      yum install -y autoconf \
