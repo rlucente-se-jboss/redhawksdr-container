@@ -18,6 +18,9 @@ Dockerfile patch script `redhawkBuild.Dockerfile.patch` and require
 additional work for the scripts to execute.
 
 ## Build the container image
+These instructions are based on the [container build instructions](https://redhawksdr.org/3.0.1/html/Containers/containerized-components.html)
+for RedHawkSDR.
+
 This will produce a very large container image (~4 GB) and take
 around an hour to complete.
 
